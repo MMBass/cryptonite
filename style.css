@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hU-GPDw5FSPJ-qBSI6J7fQmD3ClgzOMk8COXAJa7xNJ7kv3s6A");
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     
+     font-size: 15px;
+}
+
+#About_div, #Live_div{
+    display: none;
+}
+
+#progress_s ,#choice_s{
+  background-color: rgba(30, 135, 255, 0.356);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  font-size: 60px;
+}
+
+#progress_s .spinner-border{
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+}
+
+#choice_s .card{
+  max-width: 500px;
+  font-size: 20px;
+}
+
+header{
+    min-width: 240px;
+    padding: 20px 5px;
+}
+
+.navbar{
+  min-width: 240px;
+}
+
+#serch_input{
+  width: 20vw;
+  min-width: 115px;
+  
+} 
+
+/*SWITCH:*/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 17px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+a{
+  max-height: 40px;
+}
+
+.card{
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 500px;
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+.card img{
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.452);
+  
+}
+
+.myCollapse{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.waitingToPush{
+  background-color: red;
+}
+
+#About_div .card{
+ max-width: 100%;
+}

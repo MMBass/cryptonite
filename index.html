@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Cryptonite.</title>
+</head>
+
+
+<body>
+  
+    <div id="progress_s" class="d-none">
+        <div class="spinner-border text-primary"  role="status">
+       </div>
+     </div>
+
+ <div class="container">
+  
+
+  <div id="choice_s" class="d-none">
+    <div class="card col-6">
+        <div class="card-header">
+          Remove One
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">You have Choose max items, please remove one:</h5>
+          <div id="list_to_remove">
+          </div>
+          <button id="cancel_btn" class="btn btn-primary">Cancel</button>
+        </div>
+      </div>
+  </div>
+
+   <header class="bg-secondary rounded-top mt-2 ">
+     <h1>Cryptonite</h1>
+   </header>
+
+   <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="navbar-collapse row">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 col-9-sm">
+            <li class="nav-item active bg-primary rounded">
+              <a class="nav-link" onclick="navBar.homeClick()">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="Live_Report" class="nav-link" onclick="navBar.liveReportClick()">Live Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick='navBar.aboutClick()'>About</a>
+            </li>
+          </ul>
+          <form  class="form-inline my-2 my-lg-0 col-9-sm">
+            <input id="serch_input" class="form-control mr-sm-2" type="search" placeholder="try: zoc" list="selected-items">
+            <datalist id="selected-items">
+              <option value="Selected-Items">
+            </datalist>
+            <button id="serch_btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+          </form>
+        </div>
+   </nav>
+
+ <div id="main_div">
+      <div id="Home_div" class="contant_divs row justify-content-center align-items-center">
+        
+      </div> 
+       <div id="chartContainer" class="contant_divs mt-1 text-center" style="height: 300px; width: 100%;"></div>
+      <div id="About_div" class="contant_divs text-center">
+        <div class="card mw-5">
+            <div class="card-header">
+              About:
+            </div>
+            <div class="card-body">
+              <h1 class="card-title">Mendi Bass</h1>
+              <h5 class="card-title">Jhon Bryce</h5>
+              <p>
+                This site displays the existing virtual currencies and allows tracking their dollar values</p>
+            </div>
+      </div>
+     </div>
+
+   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/aa3c9227da.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>
