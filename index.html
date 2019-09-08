@@ -11,7 +11,6 @@
 
 
 <body>
-  
     <div id="progress_s" class="d-none">
         <div class="spinner-border text-primary"  role="status">
        </div>
@@ -42,21 +41,21 @@
         <div class="navbar-collapse row">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0 col-9-sm">
             <li class="nav-item active bg-primary rounded">
-              <a class="nav-link" onclick="navBar.homeClick()">Home</a>
+              <a id="Home" class="nav-link" onclick="NAV_BAR.navBtns(this)">Home</a>
             </li>
             <li class="nav-item">
-              <a id="Live_Report" class="nav-link" onclick="navBar.liveReportClick()">Live Reports</a>
+              <a id="chartContainer" class="nav-link" onclick="NAV_BAR.navBtns(this)">Live Reports</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick='navBar.aboutClick()'>About</a>
+              <a id="About" class="nav-link" onclick="NAV_BAR.navBtns(this)">About</a>
             </li>
           </ul>
           <form  class="form-inline my-2 my-lg-0 col-9-sm">
-            <input id="serch_input" class="form-control mr-sm-2" type="search" placeholder="try: zoc" list="selected-items">
+            <input id="search_input" class="form-control mr-sm-2" type="search" placeholder="try: zoc" list="selected-items">
             <datalist id="selected-items">
               <option value="Selected-Items">
             </datalist>
-            <button id="serch_btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+            <button id="search_btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
           </form>
         </div>
    </nav>
@@ -65,7 +64,7 @@
       <div id="Home_div" class="contant_divs row justify-content-center align-items-center">
         
       </div> 
-       <div id="chartContainer" class="contant_divs mt-1 text-center" style="height: 300px; width: 100%;"></div>
+       <div id="chartContainer_div" class="contant_divs mt-1 text-center" style="height: 300px; width: 100%;"></div>
       <div id="About_div" class="contant_divs text-center">
         <div class="card mw-5">
             <div class="card-header">
