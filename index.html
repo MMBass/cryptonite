@@ -9,60 +9,66 @@
     <title>Cryptonite.</title>
 </head>
 
+<body class="container">
 
-<body>
+ <!--  -->
     <div id="progress_s" class="d-none">
-        <div class="spinner-border text-primary"  role="status">
+        <div class="spinner-border text-secondary"  role="status">
        </div>
      </div>
-
- <div class="container">
   
-
   <div id="choice_s" class="d-none">
     <div class="card col-6">
         <div class="card-header">
           Remove One
         </div>
         <div class="card-body">
-          <h5 class="card-title">You have Choose max items, please remove one:</h5>
+          <h5 class="card-title">You have Chosen max items, please remove one:</h5>
           <div id="list_to_remove">
           </div>
           <button id="cancel_btn" class="btn btn-primary">Cancel</button>
         </div>
       </div>
   </div>
+  <!--  -->
 
-   <header class="bg-secondary rounded-top mt-2 ">
-     <h1>Cryptonite</h1>
+   <header class="rounded-top fixed-top text-white">
+     <h1>Crypto<span>nite</span>
+       </h1>
+
+     <nav class="navbar navbar-expand">
+      <div class="navbar-collapse row">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 col-9-sm">
+          <li class="nav-item active rounded">
+            <a id="Home" class="nav-link" onclick="NAV_BAR.navBtns(this)">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="chartContainer" class="nav-link" onclick="NAV_BAR.navBtns(this)">Live Reports</a>
+          </li>
+          <li class="nav-item">
+            <a id="About" class="nav-link" onclick="NAV_BAR.navBtns(this)">About</a>
+          </li>
+        </ul>
+        <form  class="form-inline my-2 my-lg-0 col-9-sm">
+          <input id="search_input" class="form-control mr-sm-2" type="search" placeholder="try: zoc" list="selected-items">
+          <datalist id="selected-items">
+            <option value="Selected-Items">
+          </datalist>
+          <button id="search_btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+        </form>
+      </div>
+    </nav>
    </header>
 
-   <nav class="navbar navbar-expand navbar-light bg-light">
-        <div class="navbar-collapse row">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 col-9-sm">
-            <li class="nav-item active bg-primary rounded">
-              <a id="Home" class="nav-link" onclick="NAV_BAR.navBtns(this)">Home</a>
-            </li>
-            <li class="nav-item">
-              <a id="chartContainer" class="nav-link" onclick="NAV_BAR.navBtns(this)">Live Reports</a>
-            </li>
-            <li class="nav-item">
-              <a id="About" class="nav-link" onclick="NAV_BAR.navBtns(this)">About</a>
-            </li>
-          </ul>
-          <form  class="form-inline my-2 my-lg-0 col-9-sm">
-            <input id="search_input" class="form-control mr-sm-2" type="search" placeholder="try: zoc" list="selected-items">
-            <datalist id="selected-items">
-              <option value="Selected-Items">
-            </datalist>
-            <button id="search_btn" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
-          </form>
-        </div>
-   </nav>
+   
 
- <div id="main_div">
+ <div id="main_div" >
       <div id="Home_div" class="contant_divs row justify-content-center align-items-center">
-        
+        <div id="h1_container">
+          <h1>CRYPTOCURRENCIES DISPLAYED FROM <span>API</span></h1>
+          <br>
+          <div class="colored-line"></div>
+        </div>
       </div> 
        <div id="chartContainer_div" class="contant_divs mt-1 text-center" style="height: 300px; width: 100%;"></div>
       <div id="About_div" class="contant_divs text-center">
@@ -72,17 +78,19 @@
             </div>
             <div class="card-body">
               <h1 class="card-title">Mendi Bass</h1>
-              <h5 class="card-title">Jhon Bryce</h5>
+              <h5 class="card-title">John Bryce</h5>
               <p>
-                This site displays the existing virtual currencies and allows tracking their dollar values</p>
+                This site displays the existing virtual currencies and allows tracking of their dollar values</p>
             </div>
       </div>
-     </div>
 
    </div>
+   <div id="bg-light">
+    </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="main.js"></script>
   <script src="https://kit.fontawesome.com/aa3c9227da.js"></script>
   <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>

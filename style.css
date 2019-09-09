@@ -1,4 +1,5 @@
 *{
+  z-index: 10;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -6,29 +7,36 @@
 
 html,body{
     height: 100%;
+    
 }
 
 body{
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hU-GPDw5FSPJ-qBSI6J7fQmD3ClgzOMk8COXAJa7xNJ7kv3s6A");
-     /* Create the parallax scrolling effect */
+    height: 100%;
+    font-size: 15px;
+    background: linear-gradient(180deg, #0a1623 80%, #f4f9ff 80%);
+  
+    /* parallax scrolling effect */
      background-attachment: fixed;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-size: cover;
-     
-     font-size: 15px;
+}
+
+
+#main_div{
+   margin-top: 200px;
+   color: rgb(91, 103, 116);
 }
 
 #About_div, #Live_div{
     display: none;
 }
+
 #progress_s ,#choice_s{
   position: fixed;
-  background-color: rgba(30, 135, 255, 0.356);
+  background-color: rgba(189, 220, 255, 0.356);
   width: 100%;
   height: 100%;
-  margin-top: -10px;
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  z-index: 1050;
   font-size: 60px;
 }
 
@@ -39,17 +47,44 @@ body{
 }
 
 #choice_s .card{
+  margin: auto;
   max-width: 500px;
   font-size: 20px;
+  min-width: 400px;
+}
+
+#choice_s i{
+  color: #02c041;
+  margin-left: 78%;
 }
 
 header{
+    color: white; 
+    background-color:#0a1520; 
     min-width: 240px;
     padding: 20px 5px;
 }
+#onknown{
+width: 100%;
+align-content: center;
+}
 
 .navbar{
+  color: white;
+  background-color:#0e1e30; 
   min-width: 240px;
+}
+
+.navbar a{
+  border-bottom: 3px solid #0e1e30;
+}
+
+.navbar a:hover {
+  border-bottom: 3px solid #00d548;
+}
+
+.navbar a .active_a{
+  border-bottom: 3px solid #00d548;
 }
 
 #serch_input{
@@ -57,6 +92,32 @@ header{
   min-width: 115px;
   
 } 
+
+span{
+  color: #00d548;
+}
+
+#h1_container{
+  text-align: center;
+  width: 100%; 
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+#h1_container h1{
+  margin-bottom: -10px;
+}
+
+
+.colored-line {
+  background: #00d548;
+  background-color: rgb(0, 213, 72);
+  height: 3px;
+  width: 120px;
+  display: block;
+  margin: auto;
+}
 
 /*SWITCH:*/
 /* The switch - the box around the slider */
@@ -121,27 +182,39 @@ a{
   max-height: 40px;
 }
 
-.card-parent{
+#Home_div .card-parent{
+  padding: 0;
   margin-bottom: auto;
+  overflow: hidden;
+  border: 1px solid #00d548;
+  border-radius:30px 30px 30px 30px;
+  max-width: 400px;
 }
 
-.card{
-  min-width: 200px;
-  min-height: 200px;
-  max-height: 500px;
-  margin-top: 10px;
-  max-width: 200px;
+#Home_div .card .card-body{
+  margin: 0;
+  width: 100%;
 }
 
-.card img{
+#Home_div .card img{
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.452);
   
 }
 
+#Home_div .card-title{
+  text-align: center;
+  border-bottom: 0;
+  width: 100%;
+  height: 35%;
+  margin-top: -2px;
+  background-color: #071623;
+}
+
 .myCollapse{
   border: 1px solid lightgray;
   border-radius: 5px;
+  padding: 5px;
 }
 .waitingToPush{
   background-color: red;
@@ -149,4 +222,16 @@ a{
 
 #About_div .card{
  max-width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  #main_div{
+    margin-top: 280px;
+ }
+}
+
+@media only screen and (max-width: 400px) {
+  #choice_s .card-parent{
+    min-width: 200px;
+  }
 }
