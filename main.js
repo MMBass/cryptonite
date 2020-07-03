@@ -72,7 +72,7 @@ const TEMPLATES = {
 function handleAllCoins(data){
  APP.HOME_DIV.style.display = 'flex';
   for(i in data){
-      if(i <= 100){
+      if(1 === 1){
       $(APP.HOME_DIV).append(TEMPLATES.COIN_TEMPLATE(data[i].symbol,data[i].name,data[i].id));
      }
  }
